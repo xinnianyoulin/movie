@@ -160,3 +160,15 @@ body {
 .pager li a{
   cursor: pointer;
 }
+.link_youku{
+  display: inline-block;
+  padding: 5px;
+  border:1px solid #ddd;
+  color: #333;
+}
+
+.link_youku:hover{
+  background-color: #ddd;
+  text-decoration: none;
+  color: #666;
+}
