@@ -18,7 +18,7 @@ module.controller('movieDetailsController', [
 		// console.log($routeParams);
 		$scope.title='Loading...';
 		HttpService.jsonp(
-			'http://api.douban.com/v2/movie/subject/'+$routeParams.id,
+			'https://api.douban.com/v2/movie/subject/'+$routeParams.id,
 			{},
 			function(data){
 			console.log(data);
