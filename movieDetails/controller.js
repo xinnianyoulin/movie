@@ -21,7 +21,7 @@ module.controller('movieDetailsController', [
 			'https://api.douban.com/v2/movie/subject/'+$routeParams.id,
 			{},
 			function(data){
-			console.log(data);
+			// console.log(data);
 			$scope.data=data;
 			$scope.title=data.title;
 			$scope.$apply();
