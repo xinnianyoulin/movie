@@ -1,0 +1,26 @@
+<h1 class="page-header">{{title}}</h1>
+<a href="#/details/{{movie.id}}" class="movie-item" ng-repeat="movie in movieData">
+	<div class="badge">{{movie.rating.average}}</div>
+	<div class="row">
+		<div class="movie-image col-md-3 col-sm-4 col-xs-12">
+			<img class="media-object" ng-src="{{movie.images.large}}" alt="{{movie.title}}">
+		</div>
+		<div class="movie-info col-md-9 col-sm-8 col-xs-12">
+			<h4 class="movie-heading">
+				<p class="movie-title"><i>片名：</i>{{movie.title}}</p>
+
+				<p class="movie-details"><i>导演：</i><span ng-repeat="curItem in movie.directors">{{curItem.name}}{{$last ? '':'、'}}</span></p>
+				<p class="movie-details"><i>主演：</i><span ng-repeat="curItem in movie.casts">{{curItem.name}}{{$last ? '':'、'}}</span></p>
+				<p class="movie-details"><i>类型：</i><span ng-repeat="curItem in movie.genres">{{curItem}}{{$last ? '':'、'}}</span></p>
+				
+			</h4>
+		</div>
+	</div>
+</a>
+<nav aria-label="...">
+  <ul class="pager">
+    <li ng-class="{disabled:curPage<=1}"><a ng-click="switchPage(curPage-1)">上一页</a></li>
+    <li ng-class="{disabled:curPage>=totalPage}"><a ng-click="switchPage(curPage+1)">下一页</a></li>
+  </ul>
+</nav>
+<p>共{{totalCount}}条信息，第{{curPage}}/{{totalPage}}页</p>
