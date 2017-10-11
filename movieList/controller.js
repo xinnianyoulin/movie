@@ -24,7 +24,7 @@ module.controller('movieListController', [
 		$scope.curPage=page;
 		$scope.totalPage=0;
 		HttpService.jsonp(
-			'http://api.douban.com/v2/movie/'+$routeParams.category,
+			'https://api.douban.com/v2/movie/'+$routeParams.category,
 			{start:start,count:count,q:$routeParams.q},
 			function(data){
 			// console.log(data);
